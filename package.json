@@ -1,0 +1,35 @@
+{
+  "name": "kardashian",
+  "version": "0.0.0",
+  "description": "A custom mocks factory",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "commit": "git-cz",
+    "lint": "eslint .",
+    "lintfix": "eslint --fix ."
+  },
+  "keywords": [
+    "javascript",
+    "testing",
+    "test",
+    "mock",
+    "unit"
+  ],
+  "author": "fcalabria",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^3.0.4",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.1",
+    "jest": "^23.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
