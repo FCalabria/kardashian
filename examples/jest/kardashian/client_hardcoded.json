@@ -1,0 +1,25 @@
+{
+  "model": {
+    "name": "Julie Koss",
+    "username": "Reuben_Yost",
+    "email": "Mortimer7@gmail.com",
+    "signInDate": "2018-03-30T21:11:03.967Z",
+    "address": {
+      "street": "Crist Mews",
+      "suite": "Apt. 799",
+      "city": "Armstrongland",
+      "zipcode": "63673-4438",
+      "geo": {
+        "lat": "89.1956",
+        "lng": "109.4952"
+      }
+    },
+    "phone": "(452) 430-4589 x706",
+    "website": "charlene.net",
+    "company": {
+      "name": "Ziemann, Wolf and Fritsch",
+      "catchPhrase": "Customer-focused zero administration installation",
+      "bs": "robust seize web services"
+    }
+  }
+}
