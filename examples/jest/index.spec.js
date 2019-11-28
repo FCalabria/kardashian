@@ -5,7 +5,9 @@ describe('main', () => {
   let mockClient;
   let client;
   beforeAll(async () => {
-    mockClient = await kardashian.fake('client_hardcoded');
+    const result = await kardashian.fake('client_hardcoded', './examples/jest/kardashian');
+    mockClient = result.faked;
+
     client = new Client(mockClient);
   });
   it('should define full client', () => {
