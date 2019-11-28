@@ -4,29 +4,53 @@
 
 ## Installing
 
+TODO. Will be a npm package
+
 ## Defining a model
 
-## Fake function
+All Kardashian models are .json files with the following structure:
 
-## Kardashian instances
+```json
+{
+  "model": {
+    // Any keys and values
+  },
+  "mandatory" : [
+    "strings",
+    "corresponding",
+    "to",
+    "modelKeys"
+  ]
+}
+```
 
-## Faker integration
+For mandatory keys, nesting is not supported.
 
-## TODO
+## Creating a fake
 
-**When reading model:**
+Add your json models on the preferred folder. By default, Kardashian looks for them in a `kardashian` folder at the same level you are executing your test script.
 
-* If it does not have mandatory fields defined, show warning. Do not show if mandatory is empty array.
-* Fake it and return
+On your tests, import the kardashian library like any other npm module
 
-### IDEAS
+```javascript
+const kardashian = require('kardashian');
+```
 
-* fake, returns an instance of a kardashian model, with access to other methods (only mandatory fields, etc)
-* use jsonschemas
+Add create copies using the `fake` function:
 
-### TO SOLVE
+```javascript
+const result = await kardashian.fake('model_name', './optional/folder/route/kardashian');
+```
 
-* how to define the use of faker or not?
-* how to programatically integrate faker --> faker.fake(--parsed user input here--)
-* faker as a peer dep?
-* does it make sense to have a "quick" method?
+The result follows this schema
+
+```javascript
+{
+  faked: {
+    // Basically the model
+  },
+  mandatory: {
+    // Only the model's mandatory pairs key-value
+  }
+}
+```
