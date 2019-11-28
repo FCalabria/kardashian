@@ -6,7 +6,7 @@ function getMandatory(fields) {
       if (Array.isArray(value)) {
         copy[key] = Array.from(value);
       } else if (value instanceof Object) {
-        copy[key] = Object.assign({}, value);
+        copy[key] = { ...value };
       } else {
         copy[key] = value;
       }
@@ -21,4 +21,4 @@ module.exports = class Faked {
     this.faked = data.model;
     this.mandatory = getMandatory.bind(this)(mandatoryFields);
   }
-}
+};

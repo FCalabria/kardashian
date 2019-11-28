@@ -39,7 +39,7 @@ describe('fake', () => {
       expect.assertions(2);
       return fake('noModel').then((data) => {
         expect(data.mandatory).toBeDefined();
-        expect(data.mandatory).toEqual(jasmine.any(Object));
+        expect(data.mandatory).toEqual(expect.any(Object));
       });
     });
     it('should return only the fields marked as mandatory', () => {

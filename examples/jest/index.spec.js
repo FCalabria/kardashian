@@ -20,7 +20,7 @@ describe('main', () => {
   });
   it('should define client sign in date', () => {
     expect(client.signInDate).toBeDefined();
-    expect(client.signInDate).toEqual(jasmine.any(Date));
+    expect(client.signInDate).toEqual(expect.any(Date));
     expect(client.signInDate).toEqual(new Date(mockClient.signInDate));
   });
 });
